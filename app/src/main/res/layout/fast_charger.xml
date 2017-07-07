@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bg">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/BannerAd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tool_bar"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <!--<com.google.android.gms.ads.AdView
+            android:id="@id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/Ad_About_Activity_banner" />-->
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/afterFullCharge"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/BannerAd"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <RelativeLayout
+                    android:id="@+id/roul_done"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/doneImage"
+                        android:layout_width="100.0dip"
+                        android:layout_height="100.0dip"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5.0dip"
+                        android:src="@drawable/ic_check_circle_white_48dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/doneImage"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="3.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:gravity="center"
+                        android:text="@string/fast_charger_complete"
+                        android:textColor="@color/white"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/NativeAdContainer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/roul_done"
+                    android:layout_marginBottom="8.0dip"
+                    android:layout_marginLeft="0.0dip"
+                    android:layout_marginRight="0.0dip"
+                    android:layout_marginTop="8.0dip"
+                    android:orientation="vertical">
+
+                    <!--<com.google.android.gms.ads.NativeExpressAdView
+                        android:id="@id/nativeAdView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        ads:adSize="FULL_WIDTHx250"
+                        ads:adUnitId="@string/admob_charger_native" />-->
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ratenow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/NativeAdContainer"
+                    android:layout_marginBottom="8.0dip"
+                    android:layout_marginLeft="16.0dip"
+                    android:layout_marginRight="16.0dip"
+                    android:layout_marginTop="8.0dip">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/CardViewRate"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:foreground="?android:selectableItemBackground"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/Rlout_top"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/TxtRateTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:paddingLeft="16.0dip"
+                                    android:paddingRight="16.0dip"
+                                    android:paddingTop="24.0dip"
+                                    android:text="@string/fast_charger_rate_title"
+                                    android:textColor="@color/white"
+                                    android:textSize="18.0sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TxtRateDesc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_below="@id/TxtRateTitle"
+                                    android:paddingLeft="16.0dip"
+                                    android:paddingRight="16.0dip"
+                                    android:paddingTop="12.0dip"
+                                    android:text="@string/fast_charger_rate_summary"
+                                    android:textColor="@color/white"
+                                    android:textSize="14.0sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/Rlout_action"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/Rlout_top"
+                                android:padding="8.0dip">
+
+                                <Button
+                                    android:id="@+id/btn_feedbak"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="8.0dip"
+                                    android:background="?android:selectableItemBackground"
+                                    android:padding="8.0dip"
+                                    android:text="@string/fast_charger_feedback"
+                                    android:textColor="@color/textPreference" />
+
+                                <Button
+                                    android:id="@+id/btn_ratenow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@id/btn_feedbak"
+                                    android:background="?android:selectableItemBackground"
+                                    android:padding="8.0dip"
+                                    android:text="@string/fast_charger_review"
+                                    android:textColor="@color/textPreference" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sharenow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ratenow"
+                    android:layout_marginBottom="16.0dip"
+                    android:layout_marginTop="8.0dip">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/CardViewShare"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:foreground="?android:selectableItemBackground"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_margin="16.0dip">
+
+                            <TextView
+                                android:id="@+id/TxtShareTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginBottom="12.0dip"
+                                android:text="@string/fast_charger_share_app"
+                                android:textColor="@color/white"
+                                android:textSize="18.0sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/TxtShareDesc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@id/TxtShareTitle"
+                                android:layout_marginBottom="16.0dip"
+                                android:text="@string/fast_charger_share_app_summary"
+                                android:textColor="@color/white"
+                                android:textSize="14.0sp" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+    <!--   rlBeforeCharging -->
+    <RelativeLayout
+        android:id="@+id/beforeFullCharge"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/BannerAd"
+        android:visibility="visible">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/CardViewBattery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CardViewBatteryArc"
+            android:layout_marginBottom="8.0dip"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginRight="16.0dip"
+            android:layout_marginTop="16.0dip"
+            android:foreground="?android:selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="170.0dip"
+                android:layout_margin="16.0dip">
+
+                <RelativeLayout
+                    android:id="@+id/rl_battery_show"
+                    android:layout_width="120.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true">
+
+                    <com.fast.charge.view.MaskableFrameLayout
+                        android:id="@+id/frm_mask_animated"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="6.0dip"
+                        android:layout_marginLeft="16.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:layout_marginTop="15.0dip"
+                        ads:mask="@drawable/ic_battery_mask"
+                        ads:porterduffxfermode="DST_IN">
+                        <com.fast.charge.view.WaveProgressView
+                            android:id="@+id/waveProgressbar"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/ractangle" />
+                    </com.fast.charge.view.MaskableFrameLayout>
+
+                    <ImageView
+                        android:layout_width="120.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_battery" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toLeftOf="@id/rl_battery_show">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <RelativeLayout
+                            android:id="@+id/lout_power_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:padding="5.0dip">
+
+                            <TextView
+                                android:id="@+id/PowerType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/fast_charger_usb"
+                                android:textColor="@color/white"
+                                android:textSize="18.0sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="20.0dip"
+                            android:layout_below="@id/lout_power_type">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="@string/fast_charger_power_type"
+                                android:textColor="@color/white"
+                                android:textSize="14.0sp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@id/rl_battery_show">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <RelativeLayout
+                            android:id="@+id/AlertLout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:padding="10.0dip">
+
+                            <ImageView
+                                android:id="@+id/alert"
+                                android:layout_width="40.0dip"
+                                android:layout_height="40.0dip"
+                                android:src="@drawable/ic_warning_white_48dp" />
+
+                            <TextView
+                                android:id="@+id/AlertText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10.0dip"
+                                android:layout_toRightOf="@id/alert"
+                                android:text="\ 2"
+                                android:textColor="@color/white"
+                                android:textSize="28.0sp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/StartFastCharger"
+            android:layout_below="@id/CardViewBattery">
+
+            <RelativeLayout
+                android:id="@+id/main_rl_tickview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginRight="16.0dip"
+                android:layout_marginTop="8.0dip">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/CardViewTickleview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@id/CardViewBatteryArc"
+                    android:foreground="?android:selectableItemBackground"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_tickview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="16.0dip">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0">
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="3.0dip"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="70.0dip"
+                                    android:layout_marginRight="20.0dip"
+                                    android:background="@color/white" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0">
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="3.0dip"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="22.0dip"
+                                    android:layout_marginRight="75.0dip"
+                                    android:background="@color/white" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginLeft="10.0dip">
+
+                                    <ImageView
+                                        android:id="@+id/FirstTickle"
+                                        android:layout_width="60.0dip"
+                                        android:layout_height="60.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_ind_fast_charging" />
+
+                                    <ImageView
+                                        android:id="@+id/FirstTickleProcess"
+                                        android:layout_width="75.0dip"
+                                        android:layout_height="75.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_progress" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/FirstTickle"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="15.0dip"
+                                        android:gravity="center"
+                                        android:text="@string/fast_charger_fast_charge"
+                                        android:textColor="@color/white"
+                                        android:textSize="10.0sp" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_centerInParent="true"
+                                android:layout_weight="1.0">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_centerInParent="true">
+
+                                    <ImageView
+                                        android:id="@+id/SecondTickle"
+                                        android:layout_width="60.0dip"
+                                        android:layout_height="60.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_ind_full_charging" />
+
+                                    <ImageView
+                                        android:id="@+id/SecondTickleProcess"
+                                        android:layout_width="75.0dip"
+                                        android:layout_height="75.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_progress" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/SecondTickle"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="15.0dip"
+                                        android:gravity="center"
+                                        android:text="@string/fast_charger_full_charge"
+                                        android:textColor="@color/white"
+                                        android:textSize="10.0sp" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10.0dip">
+
+                                    <ImageView
+                                        android:id="@+id/ThirdTickle"
+                                        android:layout_width="60.0dip"
+                                        android:layout_height="60.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_ind_trickle_charging" />
+
+                                    <ImageView
+                                        android:id="@+id/ThirdTickleProcess"
+                                        android:layout_width="75.0dip"
+                                        android:layout_height="75.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_progress" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/ThirdTickle"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="15.0dip"
+                                        android:gravity="center"
+                                        android:text="@string/fast_charger_trickle_charge"
+                                        android:textColor="@color/white"
+                                        android:textSize="10.0sp" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@id/CardViewTools"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/CardViewBatteryArc"
+                android:layout_marginBottom="16.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginRight="16.0dip"
+                android:layout_marginTop="8.0dip"
+                android:foreground="?android:selectableItemBackground"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/main_lout_toolsview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="200.0dip"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:weightSum="2.0">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="3.0">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_weight="1.0">
+
+                                    <ImageView
+                                        android:id="@id/tool_wifi"
+                                        android:layout_width="60.0dip"
+                                        android:layout_height="60.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_tool_wifi_on" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tool_wifi"
+                                        android:layout_centerHorizontal="true"
+                                        android:text="@string/fast_charger_wifi"
+                                        android:textColor="@color/white" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_weight="1.0">
+
+                                    <ImageView
+                                        android:id="@+id/tool_bluetooth"
+                                        android:layout_width="60.0dip"
+                                        android:layout_height="60.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_tool_bluetooth_on" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tool_bluetooth"
+                                        android:layout_centerHorizontal="true"
+                                        android:text="@string/fast_charger_bluetooth"
+                                        android:textColor="@color/white" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_weight="1.0">
+
+                                    <ImageView
+                                        android:id="@+id/tool_brightness"
+                                        android:layout_width="60.0dip"
+                                        android:layout_height="60.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_tool_brightness_on" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tool_brightness"
+                                        android:layout_centerHorizontal="true"
+                                        android:text="@string/fast_charger_brightness"
+                                        android:textColor="@color/white" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="3.0">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_weight="1.0">
+
+                                    <ImageView
+                                        android:id="@+id/tool_rotate"
+                                        android:layout_width="60.0dip"
+                                        android:layout_height="60.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_tool_rotate_autorotate" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tool_rotate"
+                                        android:layout_centerHorizontal="true"
+                                        android:text="@string/fast_charger_rotate"
+                                        android:textColor="@color/white" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_weight="1.0">
+
+                                    <ImageView
+                                        android:id="@+id/tool_mode"
+                                        android:layout_width="60.0dip"
+                                        android:layout_height="60.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_tool_profile_normal" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tool_mode"
+                                        android:layout_centerHorizontal="true"
+                                        android:text="@string/fast_charger_mode"
+                                        android:textColor="@color/white" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_weight="1.0">
+
+                                    <ImageView
+                                        android:id="@+id/tool_timeout"
+                                        android:layout_width="60.0dip"
+                                        android:layout_height="60.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_tool_timeout_fourty" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tool_timeout"
+                                        android:layout_centerHorizontal="true"
+                                        android:text="@string/fast_charger_timeout"
+                                        android:textColor="@color/white" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+
+        <Button
+            android:id="@id/StartFastCharger"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10.0dip"
+            android:background="@drawable/button"
+            android:padding="20.0dip"
+            android:text="@string/fast_charger_button" />
+    </RelativeLayout>
+</RelativeLayout>

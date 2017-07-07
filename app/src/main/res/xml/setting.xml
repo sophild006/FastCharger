@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.fast.charge.preference.mPreferenceCatagory
+        android:textColor="#fff44336"
+        android:title="@string/setting_about_app">
+        <com.fast.charge.preference.mPreference
+            android:key="MoreApp"
+            android:summary="@string/setting_more_app_summary"
+            android:title="@string/setting_more_app" />
+        <com.fast.charge.preference.mPreference
+            android:key="RateUs"
+            android:summary="@string/setting_rate_app_summary"
+            android:title="@string/setting_rate_app" />
+        <com.fast.charge.preference.mPreference
+            android:key="ShareApp"
+            android:summary="@string/setting_share_app_summary"
+            android:title="@string/setting_share_app" />
+        <com.fast.charge.preference.mPreference
+            android:key="About"
+            android:summary="@string/setting_about_us_app_summary"
+            android:title="@string/setting_about_us_app" />
+        <com.fast.charge.preference.mPreference
+            android:key="FeedBack"
+            android:summary="@string/setting_feedback_summary"
+            android:title="@string/setting_feedback" />
+        <com.fast.charge.preference.mPreference
+            android:key="Version"
+            android:summary="0.0.0"
+            android:title="@string/setting_version" />
+        <com.fast.charge.preference.mPreference
+            android:key="Update"
+            android:summary="@string/setting_check_update_summary"
+            android:title="@string/setting_check_update" />
+    </com.fast.charge.preference.mPreferenceCatagory>
+    <com.fast.charge.preference.mPreferenceCatagory
+        android:textColor="#fff44336"
+        android:title="@string/setting_license_title">
+        <com.fast.charge.preference.mPreference
+            android:key="Licence"
+            android:summary="@string/setting_license_title"
+            android:title="@string/setting_license_title" />
+    </com.fast.charge.preference.mPreferenceCatagory>
+</PreferenceScreen>

@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bg">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/card_process"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="16.0dip"
+            android:layout_marginLeft="0.0dip"
+            android:layout_marginRight="0.0dip"
+            android:layout_marginTop="16.0dip">
+
+            <android.support.v7.widget.CardView
+                android:visibility="gone"
+                android:id="@+id/CardViewBatteryArc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginRight="16.0dip"
+                android:foreground="?android:selectableItemBackground">
+
+                <RelativeLayout
+                    android:id="@+id/batteryArc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="300.0dip"
+                    android:layout_marginBottom="8.0dip">
+
+                    <RelativeLayout
+                        android:id="@+id/lout_batteryarc"
+                        android:layout_width="220.0dip"
+                        android:layout_height="220.0dip"
+                        android:layout_margin="18.0dip">
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_toRightOf="@id/lout_batteryarc">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <RelativeLayout
+                                android:id="@+id/AlertLout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:padding="10.0dip">
+
+                                <ImageView
+                                    android:id="@+id/alert"
+                                    android:layout_width="80.0dip"
+                                    android:layout_height="80.0dip"
+                                    android:src="@drawable/ic_warning_white_48dp" />
+
+                                <TextView
+                                    android:id="@+id/AlertText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10.0dip"
+                                    android:layout_toRightOf="@id/alert"
+                                    android:text="\ 2"
+                                    android:textColor="@color/white"
+                                    android:textSize="58.0sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/AlertLout">
+
+                                <Button
+                                    android:id="@+id/PowerSavingMode"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:paddingBottom="-10.0dip"
+                                    android:paddingLeft="45.0dip"
+                                    android:paddingRight="45.0dip"
+                                    android:paddingTop="-10.0dip"
+                                    android:text="optimize"
+                                    android:textSize="20.0sp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:visibility="gone"
+                android:id="@+id/CardViewTools"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/CardViewBatteryArc"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginRight="16.0dip"
+                android:layout_marginTop="8.0dip"
+                android:foreground="?android:selectableItemBackground">
+
+                <RelativeLayout
+                    android:id="@+id/loutTools"
+                    android:layout_width="fill_parent"
+                    android:layout_height="350.0dip"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="8.0dip">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical"
+                        android:weightSum="2.0">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="3.0">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_weight="1.0">
+
+                                    <ImageView
+                                        android:id="@+id/tool_wifi"
+                                        android:layout_width="100.0dip"
+                                        android:layout_height="100.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_tool_wifi_on" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tool_wifi"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="10.0dip"
+                                        android:text=" wifi"
+                                        android:textColor="@color/white"
+                                        android:textSize="20.0sp" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_weight="1.0">
+
+                                    <ImageView
+                                        android:id="@+id/tool_bluetooth"
+                                        android:layout_width="100.0dip"
+                                        android:layout_height="100.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_tool_bluetooth_on" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tool_bluetooth"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="10.0dip"
+                                        android:text="bluetooth"
+                                        android:textColor="@color/white"
+                                        android:textSize="20.0sp" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_weight="1.0">
+
+                                    <ImageView
+                                        android:id="@+id/tool_brightness"
+                                        android:layout_width="100.0dip"
+                                        android:layout_height="100.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_tool_brightness_on" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tool_brightness"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="10.0dip"
+                                        android:text="brightness"
+                                        android:textColor="@color/white"
+                                        android:textSize="20.0sp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="3.0">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_weight="1.0">
+
+                                    <ImageView
+                                        android:id="@+id/tool_rotate"
+                                        android:layout_width="100.0dip"
+                                        android:layout_height="100.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_tool_rotate_autorotate" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tool_rotate"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="10.0dip"
+                                        android:text="rotate"
+                                        android:textColor="@color/white"
+                                        android:textSize="20.0sp" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_weight="1.0">
+
+                                    <ImageView
+                                        android:id="@+id/tool_mode"
+                                        android:layout_width="100.0dip"
+                                        android:layout_height="100.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_tool_profile_normal" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tool_mode"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="10.0dip"
+                                        android:text="mode"
+                                        android:textColor="@color/white"
+                                        android:textSize="20.0sp" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_weight="1.0">
+
+                                    <ImageView
+                                        android:id="@+id/tool_timeout"
+                                        android:layout_width="100.0dip"
+                                        android:layout_height="100.0dip"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_tool_timeout_fourty" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tool_timeout"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="10.0dip"
+                                        android:text="timeout"
+                                        android:textColor="@color/white"
+                                        android:textSize="20.0sp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:visibility="gone"
+                android:id="@+id/batteryDetail"
+                android:layout_width="fill_parent"
+                android:layout_height="100.0dip"
+                android:layout_below="@id/CardViewTools"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginRight="16.0dip"
+                android:layout_marginTop="8.0dip"
+                android:foreground="?android:selectableItemBackground">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="8.0dip">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="2.0dip">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="3.0">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_margin="5.0dip">
+
+                                    <TextView
+                                        android:id="@+id/TxtTemperature"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="10.0dip"
+                                        android:singleLine="true"
+                                        android:text="AAAAA"
+                                        android:textColor="@color/white"
+                                        android:textSize="22.0sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="2.0dip"
+                                        android:text="@string/main_temperature"
+                                        android:textColor="@color/white" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="0.5dip"
+                                android:layout_height="fill_parent"
+                                android:background="#93ffffff" />
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_margin="5.0dip">
+
+                                    <TextView
+                                        android:id="@+id/TxtVoltage"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="10.0dip"
+                                        android:singleLine="true"
+                                        android:text="AAAAA"
+                                        android:textColor="@color/white"
+                                        android:textSize="22.0sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="2.0dip"
+                                        android:text="@string/main_voltage"
+                                        android:textColor="@color/white" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="0.5dip"
+                                android:layout_height="fill_parent"
+                                android:background="#93ffffff" />
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:layout_margin="5.0dip">
+
+                                    <TextView
+                                        android:id="@+id/TxtLevel"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="10.0dip"
+                                        android:singleLine="true"
+                                        android:text="AAAAA"
+                                        android:textColor="@color/white"
+                                        android:textSize="22.0sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="2.0dip"
+                                        android:text="@string/main_level"
+                                        android:textColor="@color/white" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/NativeAdContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/batteryDetail"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginLeft="0.0dip"
+                android:layout_marginRight="0.0dip"
+                android:layout_marginTop="8.0dip"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ratenow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/NativeAdContainer"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginRight="16.0dip"
+                android:layout_marginTop="8.0dip">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/CardViewRate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:selectableItemBackground">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/Rlout_top"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/TxtRateTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:paddingLeft="16.0dip"
+                                android:paddingRight="16.0dip"
+                                android:paddingTop="24.0dip"
+                                android:text="main_rate_title"
+                                android:textColor="@color/white"
+                                android:textSize="19.0sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/TxtRateDesc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@id/TxtRateTitle"
+                                android:paddingLeft="16.0dip"
+                                android:paddingRight="16.0dip"
+                                android:paddingTop="12.0dip"
+                                android:text="summary"
+                                android:textColor="@color/white"
+                                android:textSize="15.0sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/Rlout_action"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Rlout_top"
+                            android:padding="8.0dip">
+
+                            <Button
+                                android:id="@+id/btn_feedbak"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="8.0dip"
+                                android:background="?android:selectableItemBackground"
+                                android:padding="8.0dip"
+                                android:text="feedback"
+                                android:textColor="@color/textPreference" />
+
+                            <Button
+                                android:id="@+id/btn_ratenow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/btn_feedbak"
+                                android:background="?android:selectableItemBackground"
+                                android:padding="8.0dip"
+                                android:text="review"
+                                android:textColor="@color/textPreference" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sharenow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ratenow"
+                android:layout_marginBottom="16.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginRight="16.0dip"
+                android:layout_marginTop="8.0dip">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/CardViewShare"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:selectableItemBackground">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="16.0dip">
+
+                        <TextView
+                            android:id="@+id/TxtShareTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="12.0dip"
+                            android:text="main_share_app"
+                            android:textColor="@color/white"
+                            android:textSize="19.0sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/TxtShareDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@id/TxtShareTitle"
+                            android:layout_marginBottom="16.0dip"
+                            android:text="main_share_app_summary"
+                            android:textColor="@color/white"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
